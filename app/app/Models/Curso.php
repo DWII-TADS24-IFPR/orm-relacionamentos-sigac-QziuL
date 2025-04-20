@@ -18,7 +18,7 @@ class Curso extends Model
         'eixo_id'
     ];
 
-    public function turma(): HasMany{
+    public function turmas(): HasMany{
         return $this->HasMany(Turma::class);
     }
 
