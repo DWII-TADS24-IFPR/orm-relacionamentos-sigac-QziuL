@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Curso extends Model
@@ -17,7 +18,7 @@ class Curso extends Model
         'eixo_id'
     ];
 
-    public function turma(): HasOne{
-        return $this->hasOne(Turma::class);
+    public function turma(): HasMany{
+        return $this->HasMany(Turma::class);
     }
 }
