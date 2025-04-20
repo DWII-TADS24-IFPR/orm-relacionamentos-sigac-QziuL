@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Comprovante extends Model
 {
@@ -16,6 +17,10 @@ class Comprovante extends Model
         'aluno_id',
         'user_id'
     ];
+
+    public function declaracoes(): HasMany{
+        return $this->hasMany(Declaracao::class);
+    }
 
     public function categoria(): BelongsTo{
         return $this->belongsTo(Categoria::class);
