@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('curso_id');
             $table->unsignedBigInteger('turma_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('curso_id')->references('id')->on('cursos');
+            $table->foreign('turma_id')->references('id')->on('turmas');
             $table->softDeletes();
             $table->timestamps();
         });

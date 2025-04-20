@@ -21,4 +21,8 @@ class Curso extends Model
     public function turma(): HasMany{
         return $this->HasMany(Turma::class);
     }
+
+    public function alunos(): HasMany{
+        return $this->HasMany(Aluno::class);
+    }
 }
