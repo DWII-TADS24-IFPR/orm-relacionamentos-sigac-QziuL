@@ -31,8 +31,8 @@ Route::prefix('/eixo')->group(function(){
 });
 
 
-// Rotas para Niveis
-Route::prefix('/niveis')->group(function () {
+// Rotas para Nivel
+Route::prefix('/nivel')->group(function () {
     Route::get('/', function () {
         //
     });

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Niveis;
-use App\Repositories\NiveisRepository;
+use App\Models\Nivel;
+use App\Repositories\NivelRepository;
 use Illuminate\Http\Request;
 
-class NiveisController extends Controller
+class NivelController extends Controller
 {
-    protected NiveisRepository $repository;
+    protected NivelRepository $repository;
 
     public function __construct(){
-        $this->repository = new NiveisRepository();
+        $this->repository = new NivelRepository();
     }
 
     /**
@@ -35,7 +35,7 @@ class NiveisController extends Controller
      */
     public function store(Request $request): string
     {
-        $obj = new Niveis();
+        $obj = new Nivel();
         $obj->nome = mb_strtoupper($request->nome, 'UTF-8');
         $this->repository->save($obj);
         return "<h1>Store - OK!</h1>";

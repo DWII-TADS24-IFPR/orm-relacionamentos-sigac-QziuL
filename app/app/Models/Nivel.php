@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Eixo extends Model
+class Nivel extends Model
 {
-    /**
-     * @var array|false|mixed|string|string[]|null
-     */
+    protected $table = 'niveis';
 
-    protected $table = 'eixos';
     protected $fillable = ['nome'];
 
     public function cursos(): HasMany{

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('ano');
             $table->unsignedBigInteger('curso_id');
+            $table->foreign('curso_id')->references('id')->on('cursos');
             $table->softDeletes();
             $table->timestamps();
         });
