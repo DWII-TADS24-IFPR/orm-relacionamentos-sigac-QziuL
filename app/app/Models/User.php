@@ -58,6 +58,10 @@ class User extends Authenticatable
         return $this->hasMany(Comprovante::class);
     }
 
+    public function documentos(): HasMany{
+        return $this->hasMany(Documento::class);
+    }
+
     public function role(): BelongsTo{
         return $this->belongsTo(Role::class);
     }
