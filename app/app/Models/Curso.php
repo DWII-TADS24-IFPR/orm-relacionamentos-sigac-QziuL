@@ -27,6 +27,14 @@ class Curso extends Model
         return $this->HasMany(Aluno::class);
     }
 
+    public function categorias(): HasMany{
+        return $this->HasMany(Categoria::class);
+    }
+
+    public function users(): HasMany{
+        return $this->HasMany(User::class);
+    }
+
     public function nivel(): BelongsTo{
         return $this->belongsTo(Nivel::class);
     }
